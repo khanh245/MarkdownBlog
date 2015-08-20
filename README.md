@@ -1,7 +1,7 @@
 # MarkdownBlog
 A blog that uses markdown text to make posts. 
 
-#### The MIT License (MIT)
+##### The MIT License (MIT)
 
 Copyright (c) 2015 Khanh Nguyen
 

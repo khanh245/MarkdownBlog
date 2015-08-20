@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{45BEF058-B7B0-4C89-B76B-5DDE8E1853C9}</ProjectGuid>
+    <ProjectGuid>{8C68F4FA-F9F8-4276-ACE8-4FEB4CF34E80}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MarkdownBlog.Utils</RootNamespace>
-    <AssemblyName>MarkdownBlog.Utils</AssemblyName>
+    <RootNamespace>MarkdownBlog.NUnit.Tests</RootNamespace>
+    <AssemblyName>MarkdownBlog.NUnit.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

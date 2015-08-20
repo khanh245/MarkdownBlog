@@ -1,14 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="Global.asax.cs" company="Ascension">
+//   MVC Application
+// </copyright>
+// <summary>
+//   The mvc application.
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace MarkdownBlog
 {
-    public class MvcApplication : System.Web.HttpApplication
+    using System.Web;
+    using System.Web.Mvc;
+    using System.Web.Routing;
+
+    /// <summary>
+    /// The MVC application.
+    /// </summary>
+    public class MvcApplication : HttpApplication
     {
+        /// <summary>
+        /// The application_ start.
+        /// </summary>
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

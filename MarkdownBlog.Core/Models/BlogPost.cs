@@ -1,48 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.SqlServer.Server;
+﻿// --------------------------------------------------------------------------------------------------------------------
+// <copyright file="BlogPost.cs" company="Ascension">
+//   Blog post assembly.
+// </copyright>
+// <summary>
+//   Represents a blog post
+// </summary>
+// --------------------------------------------------------------------------------------------------------------------
 
 namespace MarkdownBlog.Core.Models
 {
+    using System;
+
     /// <summary>
     /// Represents a blog post
     /// </summary>
     public class BlogPost
     {
         /// <summary>
-        /// The title of the blog post
-        /// </summary>
-        public string Title { get; set; }
-
-        /// <summary>
-        /// The content of the blog post
-        /// </summary>
-        public string Content { get; set; }
-
-        /// <summary>
-        /// The created date of the blog post
-        /// </summary>
-        public DateTime CreatedDate { get; set; }
-
-        /// <summary>
-        /// Instantiates an instance of an empty blog post
+        /// Initializes a new instance of the <see cref="BlogPost"/> class.
         /// </summary>
         public BlogPost()
         {
-            Title = string.Empty;
-            Content = string.Empty;
-            CreatedDate = DateTime.Today.Date;
+            this.Title = string.Empty;
+            this.Content = string.Empty;
+            this.CreatedDate = DateTime.Today.Date;
         }
 
         /// <summary>
-        /// Instantiates an instance of a blog post
+        /// Initializes a new instance of the <see cref="BlogPost"/> class. 
         /// </summary>
-        /// <param name="title">Blog post title</param>
-        /// <param name="content">Blog post content</param>
-        /// <param name="createdDate">Blog post created date</param>
+        /// <param name="title">
+        /// Blog post title
+        /// </param>
+        /// <param name="content">
+        /// Blog post content
+        /// </param>
+        /// <param name="createdDate">
+        /// Blog post created date
+        /// </param>
         public BlogPost(string title, string content, DateTime createdDate)
         {
             if (string.IsNullOrEmpty(title))
@@ -55,7 +50,22 @@ namespace MarkdownBlog.Core.Models
                 throw new ArgumentNullException(nameof(content));
             }
 
-            CreatedDate = createdDate;
+            this.CreatedDate = createdDate;
         }
+
+        /// <summary>
+        /// Gets or sets the title of the blog post
+        /// </summary>
+        public string Title { get; set; }
+
+        /// <summary>
+        /// Gets or sets the content of the blog post
+        /// </summary>
+        public string Content { get; set; }
+
+        /// <summary>
+        /// Gets or sets the created date of the blog post
+        /// </summary>
+        public DateTime CreatedDate { get; set; }
     }
 }

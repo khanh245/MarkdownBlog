@@ -1,5 +1,6 @@
 # MarkdownBlog
-A blog that uses markdown text to make posts. 
+A blog that uses markdown files to make posts. 
+
 
 ##### The MIT License (MIT)
 

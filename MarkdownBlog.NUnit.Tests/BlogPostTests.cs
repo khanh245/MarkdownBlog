@@ -22,7 +22,7 @@ namespace MarkdownBlog.NUnit.Tests
     /// </summary>
     [TestFixture]
     [Category("Blog Post Tests")]
-    public class BlogPostTests
+    internal class BlogPostTests
     {
         /// <summary>
         /// The expected blog title.

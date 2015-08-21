@@ -27,7 +27,7 @@ namespace MarkdownBlog.Core.Models
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BlogPost"/> class. 
+        /// Initializes a new instance of the <see cref="BlogPost"/> class.
         /// </summary>
         /// <param name="title">
         /// Blog post title
@@ -56,16 +56,19 @@ namespace MarkdownBlog.Core.Models
         /// <summary>
         /// Gets or sets the title of the blog post
         /// </summary>
+        /// <value>string</value>
         public string Title { get; set; }
 
         /// <summary>
         /// Gets or sets the content of the blog post
         /// </summary>
+        /// <value>string</value>
         public string Content { get; set; }
 
         /// <summary>
         /// Gets or sets the created date of the blog post
         /// </summary>
+        /// <value>DateTime</value>
         public DateTime CreatedDate { get; set; }
     }
 }

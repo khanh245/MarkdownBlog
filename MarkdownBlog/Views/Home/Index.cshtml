@@ -1,4 +1,5 @@
-﻿@model MarkdownBlog.Core.Models.BlogPost
+﻿@using MarkdownBlog.Utils
+@model MarkdownBlog.Core.Models.BlogPost
 
 @{
     ViewBag.Title = "Blog Posts";
@@ -6,8 +7,4 @@
 
 <h2>@ViewBag.Title</h2>
 
-<ul>
-    <li>Coffee</li>
-    <li>Tea</li>
-    <li>Milk</li>
-</ul> 
+@Html.Markdown(Model.Content)

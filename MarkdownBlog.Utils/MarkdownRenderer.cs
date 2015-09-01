@@ -14,7 +14,7 @@ namespace MarkdownBlog.Utils
     using System.Web;
     using System.Web.Mvc;
 
-    using MarkdownSharp;
+    using MarkdownDeep;
 
     /// <summary>
     /// Helper class for transforming Markdown.
@@ -38,6 +38,9 @@ namespace MarkdownBlog.Utils
             {
                 throw new ArgumentNullException(nameof(text));
             }
+
+            MarkdownTransformer.ExtraMode = true;
+            MarkdownTransformer.SafeMode = false;
 
             // Transform the supplied text (Markdown) into HTML.
             var html = MarkdownTransformer.Transform(text);

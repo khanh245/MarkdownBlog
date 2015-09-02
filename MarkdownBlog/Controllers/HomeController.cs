@@ -18,6 +18,9 @@ namespace MarkdownBlog.Controllers
     /// </summary>
     public class HomeController : Controller
     {
+        /// <summary>
+        ///     Blog post under test.
+        /// </summary>
         private BlogPost blogPost;
 
         /// <summary>

@@ -34,7 +34,7 @@ namespace MarkdownBlog.Utils
                                            NotifyFilter = NotifyFilters.LastAccess |
                                                           NotifyFilters.LastWrite |
                                                           NotifyFilters.FileName
-                                       };
+                                        };
         }
     }
 }

@@ -11,6 +11,7 @@
 namespace MarkdownBlog.Utils
 {
     using System;
+    using System.Text.RegularExpressions;
     using System.Web;
     using System.Web.Mvc;
 
@@ -43,10 +44,20 @@ namespace MarkdownBlog.Utils
             MarkdownTransformer.SafeMode = false;
 
             // Transform the supplied text (Markdown) into HTML.
-            var html = MarkdownTransformer.Transform(text);
+            var htmls = MarkdownTransformer.Transform(text).Split('\n');
+
+            // Creating id link for html headers
+            foreach (var html in htmls)
+            {
+                var pattern = @"(<h[0-9]{1}.*?>)(.*?)(</h[0-9]{1}>)";
+                if (Regex.Match(html, pattern).Success)
+                {
+                    var len = html.Length;
+                }
+            }
 
             // Wrap the html in an MvcHtmlString otherwise it'll be HtmlEncoded and displayed to the user as HTML :(
-            return new MvcHtmlString(html);
+            return new MvcHtmlString(" ");
         }
     }
 }

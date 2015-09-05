@@ -11,6 +11,7 @@
 namespace MarkdownBlog.Utils
 {
     using System;
+    using System.Text;
     using System.Text.RegularExpressions;
     using System.Web;
     using System.Web.Mvc;
@@ -46,18 +47,35 @@ namespace MarkdownBlog.Utils
             // Transform the supplied text (Markdown) into HTML.
             var htmls = MarkdownTransformer.Transform(text).Split('\n');
 
-            // Creating id link for html headers
+            // Creating id link for html headers.
+            for (int i = 0; i < htmls.Length; ++i)
+            {
+                const string Pattern = @"(<h[0-9]{1}.*?>)(.*?)(</h[0-9]{1}>)";
+
+                if (!Regex.Match(htmls[i], Pattern).Success)
+                {
+                    continue;
+                }
+
+                var reg = new Regex(Pattern);
+                var origHeaderString = reg.Match(htmls[i]).Groups[2].Value;
+                var headerString = reg.Match(htmls[i]).Groups[2].Value.Replace(" ", "+");
+                var headerStart = reg.Match(htmls[i]).Groups[1].Value.Replace(">", $" id=\"{headerString}\">");
+                var headerEnd = reg.Match(htmls[i]).Groups[3].Value;
+
+                htmls[i] = headerStart + origHeaderString + headerEnd;
+            }
+
+            // Jam everything back to a string.
+            StringBuilder builder = new StringBuilder();
             foreach (var html in htmls)
             {
-                var pattern = @"(<h[0-9]{1}.*?>)(.*?)(</h[0-9]{1}>)";
-                if (Regex.Match(html, pattern).Success)
-                {
-                    var len = html.Length;
-                }
+                builder.Append(html);
+                builder.Append("\n");
             }
 
             // Wrap the html in an MvcHtmlString otherwise it'll be HtmlEncoded and displayed to the user as HTML :(
-            return new MvcHtmlString(" ");
+            return new MvcHtmlString(builder.ToString());
         }
     }
 }

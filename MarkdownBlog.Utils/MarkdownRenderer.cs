@@ -24,6 +24,11 @@ namespace MarkdownBlog.Utils
     public static class MarkdownRenderer
     {
         /// <summary>
+        /// HeaderPattern to match header tags
+        /// </summary>
+        private const string HeaderPattern = @"(<h[0-9]{1}.*?>)(.*?)(</h[0-9]{1}>)";
+
+        /// <summary>
         /// An instance of the Markdown class that performs the transformations.
         /// </summary>
         private static readonly Markdown MarkdownTransformer = new Markdown();
@@ -50,16 +55,14 @@ namespace MarkdownBlog.Utils
             // Creating id link for html headers.
             for (int i = 0; i < htmls.Length; ++i)
             {
-                const string Pattern = @"(<h[0-9]{1}.*?>)(.*?)(</h[0-9]{1}>)";
-
-                if (!Regex.Match(htmls[i], Pattern).Success)
+                if (!Regex.Match(htmls[i], HeaderPattern).Success)
                 {
                     continue;
                 }
 
-                var reg = new Regex(Pattern);
+                var reg = new Regex(HeaderPattern);
                 var origHeaderString = reg.Match(htmls[i]).Groups[2].Value;
-                var headerString = reg.Match(htmls[i]).Groups[2].Value.Replace(" ", "+");
+                var headerString = reg.Match(htmls[i]).Groups[2].Value.Replace(" ", "-");
                 var headerStart = reg.Match(htmls[i]).Groups[1].Value.Replace(">", $" id=\"{headerString}\">");
                 var headerEnd = reg.Match(htmls[i]).Groups[3].Value;
 

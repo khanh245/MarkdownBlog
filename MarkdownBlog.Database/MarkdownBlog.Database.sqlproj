@@ -65,6 +65,6 @@
     <None Include="MarkdownBlog.Database.publish.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\_posts.sql" />
+    <Build Include="dbo\Posts.sql" />
   </ItemGroup>
 </Project>

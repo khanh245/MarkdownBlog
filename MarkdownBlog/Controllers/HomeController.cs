@@ -9,6 +9,7 @@
 
 namespace MarkdownBlog.Controllers
 {
+    using System.IO;
     using System.Web.Mvc;
 
     using MarkdownBlog.Core.Models;
@@ -19,7 +20,7 @@ namespace MarkdownBlog.Controllers
     public class HomeController : Controller
     {
         /// <summary>
-        ///     Blog post under test.
+        /// Blog post under test.
         /// </summary>
         private BlogPost blogPost;
 
@@ -33,8 +34,15 @@ namespace MarkdownBlog.Controllers
         {
             var appdata = this.HttpContext.Server.MapPath("~/App_Data");
             var postPath = System.IO.Path.Combine(appdata, "posts/welcome-markdown.md");
+            var file = new FileInfo(postPath);
             var text = System.IO.File.ReadAllText(postPath);
-            this.blogPost = new BlogPost() { Title = "Test Blog Post", Content = text };
+
+            this.blogPost = new BlogPost()
+                                {
+                                    Title = "Blog Post Title Goes Here",
+                                    Content = text,
+                                    CreatedDate = file.CreationTime.Date
+                                };
 
             return this.View(this.blogPost);
         }

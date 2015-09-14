@@ -5,6 +5,12 @@
     ViewBag.Title = "Blog Posts";
 }
 
-<h2>@ViewBag.Title</h2>
+<h1 class="text-center" style="font-weight: bolder"> @Model.Title </h1>
 
-@Html.Markdown(Model.Content)
+<div class="text-center" style="margin-bottom: 75px">
+    <p>
+        by <a href="#user-profile">Khanh Nguyen</a> - <span class="glyphicon glyphicon-time"></span> Posted on @Model.CreatedDate.ToString("d")
+    </p>
+</div>
+
+<div class="markdown-body"> @Html.Markdown(Model.Content) </div>

@@ -53,7 +53,7 @@ namespace MarkdownBlog.Utils
             var htmls = MarkdownTransformer.Transform(text).Split('\n');
 
             // Creating id link for html headers.
-            for (int i = 0; i < htmls.Length; ++i)
+            for (var i = 0; i < htmls.Length; ++i)
             {
                 if (!Regex.Match(htmls[i], HeaderPattern).Success)
                 {
@@ -70,7 +70,7 @@ namespace MarkdownBlog.Utils
             }
 
             // Jam everything back to a string.
-            StringBuilder builder = new StringBuilder();
+            var builder = new StringBuilder();
             foreach (var html in htmls)
             {
                 builder.Append(html);

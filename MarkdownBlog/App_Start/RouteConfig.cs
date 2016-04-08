@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="RouteConfig.cs" company="Ascension">
-//   Route Config
+//   Copyright © Ascension 2016. All rights reserved.
 // </copyright>
 // <summary>
 //   The route config.

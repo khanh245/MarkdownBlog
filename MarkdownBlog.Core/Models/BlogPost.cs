@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="BlogPost.cs" company="Ascension">
-//   Blog post assembly.
+//   Copyright © Ascension 2016. All rights reserved.
 // </copyright>
 // <summary>
 //   Represents a blog post
@@ -56,19 +56,16 @@ namespace MarkdownBlog.Core.Models
         /// <summary>
         /// Gets or sets the title of the blog post
         /// </summary>
-        /// <value>string</value>
         public string Title { get; set; }
 
         /// <summary>
         /// Gets or sets the content of the blog post
         /// </summary>
-        /// <value>string</value>
         public string Content { get; set; }
 
         /// <summary>
         /// Gets or sets the created date of the blog post
         /// </summary>
-        /// <value>DateTime</value>
         public DateTime CreatedDate { get; set; }
     }
 }

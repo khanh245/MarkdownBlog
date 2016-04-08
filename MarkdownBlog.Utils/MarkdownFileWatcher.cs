@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="MarkdownFileWatcher.cs" company="Ascension">
-//   Markdown File Watcher
+//   Copyright © Ascension 2016. All rights reserved.
 // </copyright>
 // <summary>
 //   Represents a markdown file watcher

@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="BlogPostTests.cs" company="Ascension">
-//   Blog Post Tests
+//   Copyright © Ascension 2016. All rights reserved.
 // </copyright>
 // <summary>
 //   Blog post tests.

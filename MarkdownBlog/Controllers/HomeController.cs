@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="HomeController.cs" company="Ascension">
-//   Home Controller
+//   Copyright © Ascension 2016. All rights reserved.
 // </copyright>
 // <summary>
 //   Defines the HomeController type.

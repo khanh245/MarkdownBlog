@@ -36,7 +36,7 @@
     <WarningLevel>4</WarningLevel>
     <RunCodeAnalysis>true</RunCodeAnalysis>
     <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
-    <CodeAnalysisRuleSet>MarkdownBlog.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
     <DocumentationFile>bin\MarkdownBlog.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -99,19 +99,19 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\github-markdown-style.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap.css" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap.min.css" />
+    <Content Include="content\vendors\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="content\vendors\bootstrap\js\bootstrap.js" />
+    <Content Include="content\vendors\bootstrap\js\bootstrap.min.js" />
+    <Content Include="content\vendors\bootstrap\js\npm.js" />
+    <Content Include="content\vendors\github-markdown\github-markdown-style.css" />
+    <Content Include="content\resources\css\default.css" />
+    <Content Include="content\vendors\jquery\js\jquery-3.0.0.min.js" />
+    <Content Include="content\vendors\modernizr\modernizr-2.8.3.min.js" />
     <Content Include="Global.asax" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-2.2.2.intellisense.js" />
-    <Content Include="Scripts\jquery-2.2.2.js" />
-    <Content Include="Scripts\jquery-2.2.2.min.js" />
-    <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -130,11 +130,17 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="MarkdownBlog.ruleset" />
     <Content Include="App_Data\posts\welcome-markdown.md" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Scripts\jquery-2.2.2.min.map" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap.css.map" />
+    <Content Include="content\vendors\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="content\vendors\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="content\vendors\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="content\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="content\vendors\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -143,6 +149,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="content\resources\fonts\" />
+    <Folder Include="content\resources\images\" />
+    <Folder Include="content\resources\js\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Blog\" />
   </ItemGroup>

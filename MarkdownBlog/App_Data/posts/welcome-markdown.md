@@ -172,14 +172,14 @@ Images
 
 To include an image, just put a "!" in front of a text link:
 
-![alternate text](http://someurl/image.gif)
+![alternate text](http://i.imgur.com/Fd2CR7L.gif)
 
 
 The "alternate text" will show up if the browser can't load the image.
 
 You can also use a title if you want, like this:
 
-![tiny arrow](http://greg.vario.us/img/extlink.png "tiny arrow")
+![a kiss](http://mrwgifs.com/wp-content/uploads/2013/08/Anna-Kendrick-Gives-You-A-Kiss-Gif.gif "a kiss")
 
 
 Tables

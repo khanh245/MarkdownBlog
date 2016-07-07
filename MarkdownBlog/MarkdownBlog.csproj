@@ -109,8 +109,9 @@
     <Content Include="content\vendors\bootstrap\js\npm.js" />
     <Content Include="content\vendors\github-markdown\github-markdown-style.css" />
     <Content Include="content\resources\css\default.css" />
-    <Content Include="content\vendors\jquery\js\jquery-3.0.0.min.js" />
+    <Content Include="content\vendors\jquery\js\jquery-2.2.4.min.js" />
     <Content Include="content\vendors\modernizr\modernizr-2.8.3.min.js" />
+    <Content Include="content\vendors\normalize\normalize.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
